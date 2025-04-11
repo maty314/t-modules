@@ -1,0 +1,13 @@
+{
+    "cloud": "aws",
+    "name": "argocd",
+    "repository": "https://argoproj.github.io/argo-helm",
+    "chart": "argo-cd",
+    "chart_version": "5.51.6",
+    "namespace": "argocd",
+    "values": [],
+    "set": [],
+    "kubeconfig_path_aws": "/home/user/.kube/config-aws",
+    "kubeconfig_path_huawei": "/dev/null"
+  }
+  

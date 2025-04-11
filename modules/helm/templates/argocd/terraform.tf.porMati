@@ -1,0 +1,16 @@
+# File creado por mati
+
+module "argocd" {
+  source = "../../"
+
+  cloud                  = var.cloud
+  name                   = var.name
+  chart                  = var.chart
+  chart_version          = var.chart_version
+  repository             = var.repository
+  namespace              = var.namespace
+  values                 = var.values
+  set                    = var.set
+  kubeconfig_path_aws    = var.kubeconfig_path_aws
+  kubeconfig_path_huawei = var.kubeconfig_path_huawei
+}
