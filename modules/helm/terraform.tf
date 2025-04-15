@@ -47,12 +47,4 @@ provider "helm" {
     cluster_ca_certificate = base64decode(data.aws_eks_cluster.this.certificate_authority[0].data)
     token                  = data.aws_eks_cluster_auth.cluster_auth.token
   }
-#  dynamic "registry" {
-#    for_each = { for service, attributes in var.helm_releases : service => attributes.repository if service == "karpenter" }
-#    content {
-#      url      = registry.value
-#      username = data.aws_ecrpublic_authorization_token.token[0].user_name
-#      password = data.aws_ecrpublic_authorization_token.token[0].password
-#    }
-#  }
 }
